@@ -2,24 +2,12 @@
 
 ## Origen de los datos
 
-- [ ] Especificar la fuente de los datos y la forma en que se obtuvieron. 
+- Los datos fueron obtenidos desde el sitio web Kaggle, específicamente del siguiente link[https://www.kaggle.com/datasets/hasnainjaved/melanoma-skin-cancer-dataset-of-10000-images ]
 
 ## Especificación de los scripts para la carga de datos
 
-- [ ] Especificar los scripts utilizados para la carga de los datos. 
+- En la carpeta del repositorio [scripts/preprocessing/main.py] se encuentra el script que se utiliza para cargar los datos versionados desde google drive mediante un pull de DVC. 
 
 ## Referencias a rutas o bases de datos origen y destino
 
-- [ ] Especificar las rutas o bases de datos de origen y destino para los datos.
-
-### Rutas de origen de datos
-
-- [ ] Especificar la ubicación de los archivos de origen de los datos.
-- [ ] Especificar la estructura de los archivos de origen de los datos.
-- [ ] Describir los procedimientos de transformación y limpieza de los datos.
-
-### Base de datos de destino
-
-- [ ] Especificar la base de datos de destino para los datos.
-- [ ] Especificar la estructura de la base de datos de destino.
-- [ ] Describir los procedimientos de carga y transformación de los datos en la base de datos de destino.
+- Los datos versionados están guardados en el siguiente link de drive [https://drive.google.com/drive/u/1/folders/14xKJMlBPaIOgNHjV1RkJsqFBxjnPr69L ].
