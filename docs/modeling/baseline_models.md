@@ -1,6 +1,6 @@
 # Reporte del Modelo Baseline
 
-Este documento contiene los resultados del modelo baseline. A.
+Este documento contiene los resultados del modelo baseline. 
 
 ## Descripción del modelo
 
