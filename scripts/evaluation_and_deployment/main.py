@@ -20,7 +20,6 @@ model = joblib.load("model.joblib")
 # Reemplace esto con su implementación:
 @app.post("/predict")
 async def predict(data: ApiInput) -> ApiOutput:
-    model = joblib.load("model.joblib")
     image_a= np.array(Image.open(data.features).resize((300,300))).reshape((1, 300, 300, 3))
     pred = round(float(model.predict(image_a)))
     prediction = ApiOutput(forecast=pred)
