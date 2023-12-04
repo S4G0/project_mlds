@@ -2,4 +2,4 @@ scikit-learn
 tensorflow
 fastapi
 uvicorn
-PIL
+Pillow
