@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from tensorflow import keras
+from keras.models import load_model
 import tensorflow as tf
 import joblib
 from PIL import Image
@@ -15,7 +16,8 @@ class ApiOutput(BaseModel):
     forecast: float
 
 app = FastAPI()
-model = joblib.load("model.joblib")
+#model = joblib.load("model.joblib")
+model = load_model('weights.h5')
 
 # Reemplace esto con su implementación:
 @app.post("/predict")
