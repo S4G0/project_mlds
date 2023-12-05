@@ -22,7 +22,11 @@
 
 ## Documentación del despliegue
 
-- **Instrucciones de instalación:** (instrucciones detalladas para instalar el modelo en la plataforma de despliegue)
-- **Instrucciones de configuración:** (instrucciones detalladas para configurar el modelo en la plataforma de despliegue)
-- **Instrucciones de uso:** (instrucciones detalladas para utilizar el modelo en la plataforma de despliegue)
-- **Instrucciones de mantenimiento:** (instrucciones detalladas para mantener el modelo en la plataforma de despliegue)
+- **Instrucciones de instalación:** A continuación las instrucciones detalladas para instalar el modelo en la plataforma de despliegue:
+- Clonar el Repositorio: Clonar el repositorio que contiene el código del modelo desde el repositorio remoto "git clone https://github.com/S4G0/project_mlds.git".
+- Instalar dependencias: Disponibles en el primer punto de infraestructura de este archivo.  
+- **Instrucciones de configuración:** Abrir el archivo principal (main.py).
+- **Instrucciones de uso:** Ejecutar la aplicación de fastapi (uvicorn app.main:app --reload) y acceder a la interfaz del modelo. 
+- **Instrucciones de mantenimiento:** Monitorizar regularmente las actualizaciones de seguridad de FastAPI y otras dependencias. Mejorar y actualizar según sea necesario.
+
+
