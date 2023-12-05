@@ -2,16 +2,22 @@
 
 ## Infraestructura
 
-- **Nombre del modelo:** (nombre que se le ha dado al modelo)
-- **Plataforma de despliegue:** (plataforma donde se va a desplegar el modelo)
-- **Requisitos técnicos:** (lista de requisitos técnicos necesarios para el despliegue, como versión de Python, bibliotecas de terceros, hardware, etc.)
-- **Requisitos de seguridad:** (lista de requisitos de seguridad necesarios para el despliegue, como autenticación, encriptación de datos, etc.)
+- **Nombre del modelo:** Melanoma_model.
+- **Plataforma de despliegue:** La plataforma donde se va a desplegar el modelo es FastApi.
+- **Requisitos técnicos:** Los requisitos técnicos necesarios para el despliegue son:
+  scikit-learn (versión usada 1.2.2)
+  tensorflow>=2.10.0 (versión usada 2.14.0)
+  fastapi
+  uvicorn
+  Pillow
+  La versión de Python usada para desarrollar el modelo fue 3.10.12.    
+- **Requisitos de seguridad:** El modelo desarrollado no tiene requisitos de seguridad necesarios para el despliegue.
 - **Diagrama de arquitectura:** (imagen que muestra la arquitectura del sistema que se utilizará para desplegar el modelo)
 
 ## Código de despliegue
 
-- **Archivo principal:** (nombre del archivo principal que contiene el código de despliegue)
-- **Rutas de acceso a los archivos:** (lista de rutas de acceso a los archivos necesarios para el despliegue)
+- **Archivo principal:** Main.py
+- **Rutas de acceso a los archivos:** Los archivos necesarios para el despliegue están disponibles en: https://github.com/S4G0/project_mlds/tree/master/scripts/evaluation_and_deployment
 - **Variables de entorno:** (lista de variables de entorno necesarias para el despliegue)
 
 ## Documentación del despliegue
