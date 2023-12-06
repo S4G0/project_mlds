@@ -34,21 +34,25 @@ Cliente -> Consulta (Imagen a analizar)-> FastApi y script de despliegue (ver pu
   
 **9. Instrucciones de configuración:**-
 - Instalar las siguientes librerías¨:
-  import requests
+  from PIL import Image
   from pydantic import BaseModel
+  from typing import List
+  import requests
+  import numpy as np
+  import os
+
 
 **10. Instrucciones de uso:** Ejecutar las siguientes líneas de código (Nota: actualizar el valor de path_test con la imagen a analizar):
 
     model_url = "https://projectmlds-production.up.railway.app" 
     
     class ApiInput(BaseModel):
-        features: str
+    features: List[List[List[float]]]
     
-    class ApiOutput(BaseModel):
-        forecast: float
+    path='benign_test.jpg'  #Actualizar path_test con la imagen a analizar.
+    image_list = np.divide(np.array(Image.open(path).resize((300,300))), 255).tolist()
     
-    path_test='benign_test.jpg'  #Actualizar path_test con la imagen a analizar.
-    inp = ApiInput(features=path_test)
+    inp = ApiInput(features=image_list)
     r = requests.post(
         os.path.join(model_url, "predict"),
         json=inp.dict(),
