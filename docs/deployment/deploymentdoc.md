@@ -2,8 +2,10 @@
 
 ## Infraestructura
 
-**1. Nombre del modelo:** weights.h5 (este contiene el modelo, no los pesos)
+**1. Nombre del modelo:** weights.h5 (este contiene el modelo, no los pesos).
+
 **2. Plataforma de despliegue:** La plataforma donde se va a desplegar el modelo es FastApi.
+
 **3. Requisitos técnicos:** Los requisitos técnicos necesarios para el despliegue son:
   fastapi
   pydantic
@@ -28,7 +30,8 @@ Cliente -> Consulta (Imagen a analizar)-> FastApi y script de despliegue (ver pu
 
 **8. Instrucciones de instalación:** A continuación las instrucciones detalladas para instalar el modelo en la plataforma de despliegue:
 - Clonar el Repositorio: Clonar el repositorio que contiene el código del modelo desde el repositorio remoto "git clone https://github.com/S4G0/project_mlds.git".
-- Instalar dependencias: Disponibles en el primer punto de infraestructura de este archivo (requisitos técnicos).  
+- Instalar dependencias: Disponibles en el primer punto de infraestructura de este archivo (requisitos técnicos).
+  
 **9. Instrucciones de configuración:**-
 - Instalar las siguientes librerías¨:
   import requests
