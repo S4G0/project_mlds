@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 
 
-def function_preprocessing():
+def model():
 
   df_train, df_val, df_test =  database.function_database()
   train_gen, validation_gen, test_gen =  preprocessing.function_preprocessing()
