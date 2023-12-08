@@ -20,7 +20,7 @@ import tensorflow as tf
 def function_training():
   
   train_gen, validation_gen, test_gen, batch_size =  preprocessing.function_preprocessing()
-  test_model = models.function_model()
+  test_model, dropout, neurons_in_dense_layer, learning_rate = models.function_model()
   
   """## 2.2.3. Entrenar el modelo"""
   def train_model(model, train_gen, val_gen, epochs, weights):
