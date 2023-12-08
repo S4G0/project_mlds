@@ -80,4 +80,4 @@ def function_model():
                            )
   test_model.get_compile_config()
 
-  return test_model
+  return test_model, dropout, neurons_in_dense_layer, learning_rate
