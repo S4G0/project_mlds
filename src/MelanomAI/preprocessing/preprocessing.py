@@ -74,5 +74,5 @@ def function_preprocessing():
       seed=0
       )
   
-  return train_gen, validation_gen, test_gen
+  return train_gen, validation_gen, test_gen, batch_size
 
