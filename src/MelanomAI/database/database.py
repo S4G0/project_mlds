@@ -1,22 +1,24 @@
+#!pip install dvc dvc-gdrive
+#!apt install tree git
+
+import pandas as pd
+import numpy as np
+import os
+import matplotlib.pyplot as plt
+import subprocess
+from IPython import get_ipython
+from IPython.display import display
+#import dvc
+from sklearn.model_selection import train_test_split
+import tensorflow as tf
+
+# Ignorar warnings.
+import warnings
+warnings.filterwarnings('ignore')
+
+
 def function_database():
   
-  #!pip install dvc dvc-gdrive
-  #!apt install tree git
-
-  import pandas as pd
-  import numpy as np
-  import os
-  import matplotlib.pyplot as plt
-  import subprocess
-  from IPython import get_ipython
-  from IPython.display import display
-  import dvc
-  from sklearn.model_selection import train_test_split
-  import tensorflow as tf
-
-  # Ignorar warnings.
-  import warnings
-  warnings.filterwarnings('ignore')
 
   # Commented out IPython magic to ensure Python compatibility.
   #!git clone https://github.com/S4G0/project_mlds.git
@@ -24,6 +26,10 @@ def function_database():
   #!ls
   #!git config --global user.email "sagomezar@unal.edu.co"
   #!git config --global user.name "S4G0"
+
+  from google.colab import drive
+  drive.mount('/content/drive')
+  path="/content/drive/MyDrive/Proyecto Metodologías ágiles para el desarrollo de aplicaciones con ML/Data/"
 
   #ID del drive donde están los datos versionados
   drive_id = "14xKJMlBPaIOgNHjV1RkJsqFBxjnPr69L" # reemplace aquí el id de su carpeta
