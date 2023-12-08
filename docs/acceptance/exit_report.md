@@ -17,14 +17,11 @@ Este informe describe los resultados del proyecto de machine learning y presenta
 - Recomendaciones para futuros proyectos de machine learning.
 
 ## Impacto del proyecto
-
-- Descripción del impacto del modelo en el negocio o en la industria.
-- Identificación de las áreas de mejora y oportunidades de desarrollo futuras.
+La implementación exitosa del modelo ha tenido un impacto significativo en la industria en el área de la salud al mejorar considerablemente la precisión en la detección temprana de melanoma maligno mediante imágenes de lunares de la piel. Esta mejora ha tiene el potencial de optimizar los procedimientos de diagnóstico, agilizando la evaluación de casos y permitiendo decisiones clínicas más eficientes. Además, el modelo ha puede influir positivamente en la calidad de la atención médica al proporcionar a los profesionales una herramienta avanzada y fiable para la identificación de lesiones cutáneas sospechosas, facilitando diagnósticos más tempranos y tratamientos oportunos. A pesar de estos logros notables, se reconocen oportunidades para la mejora continua, como validaciones clínicas adicionales para mantener la relevancia y eficacia a largo plazo del modelo en el ámbito de la detección de melanoma.
 
 ## Conclusiones
 
-- Resumen de los resultados y principales logros del proyecto.
-- Conclusiones finales y recomendaciones para futuros proyectos.
+El presente proyecto ha generado un modelo de aprendizaje automático promisorio  para la clasificación de melanomas en imágenes de lunares en la piel, obteniendo una tasa de precisión del 90%. El modelo final logró una significativa minimización de errores, con particular énfasis en la reducción de falsos positivos y falsos negativos. A pesar de la robustez demostrada en la capacidad de generalización del modelo, se sugiere propiciar una mejora continua y la consideración de validaciones adicionales en entornos clínicos, a fin de fortalecer su aplicabilidad en contextos del mundo real. Estas conclusiones respaldan la potencial utilidad del modelo en la detección temprana de melanoma maligno. Enfatizando en la necesidad de favorecer la evolución constante del modelo para abordar desafíos que puedan surgir en el entorno clínico y optimizar su desempeño y funcionalidad a largo plazo.
 
 ## Agradecimientos
 
