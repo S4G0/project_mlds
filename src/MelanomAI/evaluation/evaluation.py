@@ -6,6 +6,7 @@ from project_mlds.src.MelanomAI.training import training
 #!pip install dvc dvc-gdrive
 #!apt install tree git
 #!pip install mlflow==2.1.0
+#!pip install pyngrok
 
 
 import pandas as pd
@@ -25,40 +26,40 @@ import mlflow
 #!mkdir evaluation_and_deployment
 # %cd evaluation_and_deployment
 
-command = """
-mlflow server \
-        --backend-store-uri sqlite:///tracking.db \
-        --default-artifact-root file:mlruns \
-        -p 5000 &
-"""
+#command = """
+#mlflow server \
+#        --backend-store-uri sqlite:///tracking.db \
+#        --default-artifact-root file:mlruns \
+#        -p 5000 &
+#"""
+#
+#get_ipython().system_raw(command)
 
-get_ipython().system_raw(command)
+#"""Ahora debe agregar su token de `ngrok`:"""
 
-"""Ahora debe agregar su token de `ngrok`:"""
+#token = "2Y3EvQj4U0dEbOuzgzpllybfnub_248exjXrHv2FsqRTozFmG" # Agregue el token dentro de las comillas
+#os.environ["NGROK_TOKEN"] = token
 
-token = "2Y3EvQj4U0dEbOuzgzpllybfnub_248exjXrHv2FsqRTozFmG" # Agregue el token dentro de las comillas
-os.environ["NGROK_TOKEN"] = token
+#"""Nos autenticamos en ngrok:"""
 
-"""Nos autenticamos en ngrok:"""
+#!ngrok authtoken $NGROK_TOKEN
 
-!ngrok authtoken $NGROK_TOKEN
+#"""Ahora, lanzamos la conexión con ngrok:"""
 
-"""Ahora, lanzamos la conexión con ngrok:"""
+#from pyngrok import ngrok
+#ngrok.connect(5000, "http")
 
-from pyngrok import ngrok
-ngrok.connect(5000, "http")
+#"""Especificamos que MLFlow debe usar el servidor que estamos manejando."""
 
-"""Especificamos que MLFlow debe usar el servidor que estamos manejando."""
+#mlflow.set_tracking_uri("http://localhost:5000")
 
-mlflow.set_tracking_uri("http://localhost:5000")
+#"""Creamos un experimento:"""
 
-"""Creamos un experimento:"""
+#exp = mlflow.create_experiment(name="Melanoma_analysis", artifact_location="mlruns")
 
-exp = mlflow.create_experiment(name="Melanoma_analysis", artifact_location="mlruns")
+#para ejecutar la siguiente función, se debe crear un experimento en mlflow previamente.
 
-
-
-def function_evaluation():
+def function_evaluation(exp):
 
   train_gen, validation_gen, test_gen, batch_size =  preprocessing.function_preprocessing()
   model, dropout, neurons_in_dense_layer, learning_rate = models.function_model()
