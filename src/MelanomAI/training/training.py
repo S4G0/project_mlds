@@ -63,4 +63,4 @@ def function_training():
   if os.path.isfile('weights.h5'):
     print("Los pesos se guardaron en 'weights.h5'")
   
-  return model_tr, history, epochs
+  return model_tr, history, epochs, weights
