@@ -19,7 +19,7 @@ import tensorflow as tf
 def function_model():
 
   df_train, df_val, df_test =  database.function_database()
-  train_gen, validation_gen, test_gen =  preprocessing.function_preprocessing()
+  train_gen, validation_gen, test_gen, batch_size =  preprocessing.function_preprocessing()
   
   """## 2.2. Model 1: Red neuronal desde 0
   ### 2.2.1. Definición del modelo"""
