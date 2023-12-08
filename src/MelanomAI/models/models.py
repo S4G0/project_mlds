@@ -16,10 +16,10 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 
 
-df_train, df_val, df_test =  database.function_database()
-train_gen, validation_gen, test_gen =  preprocessing.function_preprocessing()
-
 def function_preprocessing():
+
+  df_train, df_val, df_test =  database.function_database()
+  train_gen, validation_gen, test_gen =  preprocessing.function_preprocessing()
   
   """## 2.2. Model 1: Red neuronal desde 0
   ### 2.2.1. Definición del modelo"""
