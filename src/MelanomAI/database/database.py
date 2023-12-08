@@ -1,7 +1,7 @@
 def function_database():
   
-  !pip install dvc dvc-gdrive
-  !apt install tree git
+  #!pip install dvc dvc-gdrive
+  #!apt install tree git
 
   import pandas as pd
   import numpy as np
@@ -19,11 +19,11 @@ def function_database():
   warnings.filterwarnings('ignore')
 
   # Commented out IPython magic to ensure Python compatibility.
-  !git clone https://github.com/S4G0/project_mlds.git
+  #!git clone https://github.com/S4G0/project_mlds.git
   # %cd project_mlds/
-  !ls
-  !git config --global user.email "sagomezar@unal.edu.co"
-  !git config --global user.name "S4G0"
+  #!ls
+  #!git config --global user.email "sagomezar@unal.edu.co"
+  #!git config --global user.name "S4G0"
 
   #ID del drive donde están los datos versionados
   drive_id = "14xKJMlBPaIOgNHjV1RkJsqFBxjnPr69L" # reemplace aquí el id de su carpeta
@@ -35,7 +35,7 @@ def function_database():
     os.environ["GDRIVE_CREDENTIALS_DATA"] = f.read()
     
   # Se traen los datos
-  !dvc pull
+  #!dvc pull
 
   list_name_original_benign=[]
   list_name_original_malignant=[]
