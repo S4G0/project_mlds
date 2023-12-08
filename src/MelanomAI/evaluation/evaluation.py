@@ -21,6 +21,43 @@ import tensorflow as tf
 import mlflow
 
 
+# Commented out IPython magic to ensure Python compatibility.
+#!mkdir evaluation_and_deployment
+# %cd evaluation_and_deployment
+
+command = """
+mlflow server \
+        --backend-store-uri sqlite:///tracking.db \
+        --default-artifact-root file:mlruns \
+        -p 5000 &
+"""
+
+get_ipython().system_raw(command)
+
+"""Ahora debe agregar su token de `ngrok`:"""
+
+token = "2Y3EvQj4U0dEbOuzgzpllybfnub_248exjXrHv2FsqRTozFmG" # Agregue el token dentro de las comillas
+os.environ["NGROK_TOKEN"] = token
+
+"""Nos autenticamos en ngrok:"""
+
+!ngrok authtoken $NGROK_TOKEN
+
+"""Ahora, lanzamos la conexión con ngrok:"""
+
+from pyngrok import ngrok
+ngrok.connect(5000, "http")
+
+"""Especificamos que MLFlow debe usar el servidor que estamos manejando."""
+
+mlflow.set_tracking_uri("http://localhost:5000")
+
+"""Creamos un experimento:"""
+
+exp = mlflow.create_experiment(name="Melanoma_analysis", artifact_location="mlruns")
+
+
+
 def function_evaluation():
 
   train_gen, validation_gen, test_gen, batch_size =  preprocessing.function_preprocessing()
@@ -44,39 +81,6 @@ def function_evaluation():
   print(f"En este caso el {metrics[1]*100:.2f}% de las muestras fueron clasificadas correctamente por el modelo.")
 
 
-  # Commented out IPython magic to ensure Python compatibility.
-  #!mkdir evaluation_and_deployment
-  # %cd evaluation_and_deployment
-
-  command = """
-  mlflow server \
-          --backend-store-uri sqlite:///tracking.db \
-          --default-artifact-root file:mlruns \
-          -p 5000 &
-  """
-  get_ipython().system_raw(command)
-
-  """Ahora debe agregar su token de `ngrok`:"""
-
-  token = "2Y3EvQj4U0dEbOuzgzpllybfnub_248exjXrHv2FsqRTozFmG" # Agregue el token dentro de las comillas
-  os.environ["NGROK_TOKEN"] = token
-
-  """Nos autenticamos en ngrok:"""
-
-  !ngrok authtoken $NGROK_TOKEN
-
-  """Ahora, lanzamos la conexión con ngrok:"""
-
-  from pyngrok import ngrok
-  ngrok.connect(5000, "http")
-
-  """Especificamos que MLFlow debe usar el servidor que estamos manejando."""
-
-  mlflow.set_tracking_uri("http://localhost:5000")
-
-  """Creamos un experimento:"""
-
-  exp = mlflow.create_experiment(name="Melanoma_analysis", artifact_location="mlruns")
 
   run = mlflow.start_run(experiment_id = exp, run_name="Melanoma_model_v0.0.1")
   mlflow.sklearn.log_model(test_model, "model")
@@ -87,3 +91,4 @@ def function_evaluation():
 
   
   return metrics[0], metrics[1]
+  
