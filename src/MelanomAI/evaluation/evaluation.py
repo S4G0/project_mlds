@@ -92,5 +92,5 @@ def function_evaluation(exp):
   mlflow.end_run()
 
   
-  return loss, accuracy
+  return loss, accuracy, weights
   
