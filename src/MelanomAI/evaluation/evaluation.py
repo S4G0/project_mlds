@@ -73,14 +73,15 @@ def function_evaluation():
 
   # Evaluación del modelo
   metrics = evaluate_model(test_model, test_gen)
-  
+  loss = metrics[0]
+  accuracy = metrics[1]
   # Resultados de la evaluación
+
   print("Resultados de la evaluación:")
   print("Loss:", metrics[0])
   print("Accuracy:", metrics[1])
   print(f"En este caso el {metrics[1]*100:.2f}% de las muestras fueron clasificadas correctamente por el modelo.")
-
-
+        
 
   run = mlflow.start_run(experiment_id = exp, run_name="Melanoma_model_v0.0.1")
   mlflow.sklearn.log_model(test_model, "model")
@@ -90,5 +91,5 @@ def function_evaluation():
   mlflow.end_run()
 
   
-  return metrics[0], metrics[1]
+  return loss, accuracy
   
