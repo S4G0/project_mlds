@@ -11,10 +11,7 @@ Este informe describe los resultados del proyecto de machine learning y presenta
 - Descripción de los resultados y su relevancia para el negocio.
 
 ## Lecciones aprendidas
-
-- Identificación de los principales desafíos y obstáculos encontrados durante el proyecto.
-- Lecciones aprendidas en relación al manejo de los datos, el modelamiento y la implementación del modelo.
-- Recomendaciones para futuros proyectos de machine learning.
+El desarrollo práctico del modelo generó algunas lecciones, una de ellas es la eficaz combinación de Keras con FastAPI, esto subraya la importancia de adaptar las herramientas a las necesidades específicas del proyecto. Además, se ha aprendido que la gestión eficiente de grandes conjuntos de datos, como el de Melanoma Skin Cancer de Kaggle, requiere estrategias cuidadosas de carga y preprocesamiento. La flexibilidad y adaptabilidad del modelo, fundamental para la generalización a imágenes inéditas, resaltan la necesidad de arquitecturas bien diseñadas. Además, se destaca la importancia crítica de seleccionar técnicas de aumentación de datos que no eliminen el lunar de la imagen, facilitando así la clasificación precisa de los lunares y mejorando la robustez del modelo en la detección temprana de melanoma. En futuros proyectos, se recomienda una elección consciente de tecnologías, una gestión efectiva de datos y un enfoque iterativo en el modelado, con especial atención a las técnicas de aumentación que preserven características críticas para la clasificación.
 
 ## Impacto del proyecto
 La implementación exitosa del modelo ha tenido un impacto significativo en la industria en el área de la salud al mejorar considerablemente la precisión en la detección temprana de melanoma maligno mediante imágenes de lunares de la piel. Esta mejora ha tiene el potencial de optimizar los procedimientos de diagnóstico, agilizando la evaluación de casos y permitiendo decisiones clínicas más eficientes. Además, el modelo ha puede influir positivamente en la calidad de la atención médica al proporcionar a los profesionales una herramienta avanzada y fiable para la identificación de lesiones cutáneas sospechosas, facilitando diagnósticos más tempranos y tratamientos oportunos. A pesar de estos logros notables, se reconocen oportunidades para la mejora continua, como validaciones clínicas adicionales para mantener la relevancia y eficacia a largo plazo del modelo en el ámbito de la detección de melanoma.
@@ -25,5 +22,5 @@ El presente proyecto ha generado un modelo de aprendizaje automático promisorio
 
 ## Agradecimientos
 
-- Agradecimientos al equipo de trabajo y a los colaboradores que hicieron posible este proyecto.
-- Agradecimientos especiales a los patrocinadores y financiadores del proyecto.
+- Agradecimientos a los colaboradores y miembros del equipo de trabajo, Santiago Gómez Arias, Mario Alberto Najar Martínez y Diana Paola Montes Grajales.	
+- Agradecimientos a los asesores y docentes del módulo Metodologías Ágiles para el Desarrollo de Aplicaciones con Machine Learning de la Universidad Nacional de Colombia.
